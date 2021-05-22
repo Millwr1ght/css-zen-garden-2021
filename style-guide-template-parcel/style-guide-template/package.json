@@ -1,0 +1,23 @@
+{
+  "name": "style-guide-template",
+  "version": "1.0.0",
+  "description": "Boilerplate for a StyleGuide template based off of the CodyHouse template",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "rimraf build/*",
+    "start": "parcel src/index.html -d build/",
+    "prebuild": "rimraf dist/*",
+    "build": "parcel build src/index.html --public-url ./",
+    "watch": "parcel watch src/index.html -d build/"
+  },
+  "author": "Shane T",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.0",
+    "rimraf": "^3.0.0",
+    "sass": "^1.23.0"
+  },
+  "dependencies": {
+    "js": "^0.1.0"
+  }
+}

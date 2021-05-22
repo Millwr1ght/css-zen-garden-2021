@@ -1,0 +1,42 @@
+@mixin box-sizing($type) {
+     -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@mixin transform($options) {
+    -webkit-transform: $options;
+  -moz-transform: $options;
+  -ms-transform: $options;
+  -o-transform: $options;
+  transform: $options;
+}
+
+@mixin transition($options) {
+    -webkit-transition: $options;
+  -moz-transition: $options;
+  transition: $options;
+}
+
+@mixin user-select($options) {
+    -webkit-user-select: $options;
+  -moz-user-select: $options;
+  -ms-user-select: $options;
+  user-select: $options;
+}
+
+@mixin appearance($option) {
+    -webkit-appearance: $option;
+  -moz-appearance: $option;
+  -ms-appearance: $option;
+  -o-appearance: $option;
+  appearance: $option;
+}
