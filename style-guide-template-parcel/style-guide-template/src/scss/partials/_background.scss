@@ -7,12 +7,26 @@ xBackground
 -------------------------------- */
 
 body {
-	/* this is the page background */
-	background-color: $color-5;
+	background: url("._background-4.jpg")
+	  no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+
+.summary { background: rgb(255, 255, 255);
+    padding: 25px ;}
+
+.preamble {
+    background: rgba(255, 255, 255, 0.705);
+    padding: 35px ;
+}
+
+.main {
+    background: rgba(255, 255, 255, 0.705);
+    padding: 25px ;
 }
 
 .page-wrapper {
-    background: url(css-zen-garden-2021\style-guide-template-parcel\style-guide-template\src\assets\._background-4.jpg) no-repeat;
-	margin: 0; 
-	position: relative;
+    background: none;
 }
