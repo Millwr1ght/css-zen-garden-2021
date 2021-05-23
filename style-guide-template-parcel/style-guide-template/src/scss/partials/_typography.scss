@@ -80,3 +80,8 @@ p {
 		line-height: 1.6;
 	}
 }
+
+.cd-primary-nav a,
+.cd-main-nav a {
+	font-family: $secondary-font;
+}
