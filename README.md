@@ -2,7 +2,7 @@
 GitHub repo for Team 5's WDD 331 Advanced CSS group project: CSS Zen Garden
 
 
-## #Loading the style-guide
+## Loading the style-guide
 Open the command line on your system and make sure you have the folder the guide is in open (.\style-guide-template-parcel\style-guide-template\). 
 Then type the following commands:
 
