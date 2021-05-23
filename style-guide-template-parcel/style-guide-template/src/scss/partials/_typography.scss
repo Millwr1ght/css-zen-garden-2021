@@ -14,12 +14,15 @@ xTypography
 
 -------------------------------- */
 
+@import url("https://fonts.googleapis.com/css2?family=Oxanium&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
 // font variables //
 // body copy
-$primary-font: "Oxanium", serif;
+$primary-font: "Ubuntu", sans-serif; //or "Titillium-Web", sans-serif;
 
 // titles, tunes and metres
-$secondary-font: "Ubuntu", sans-serif; //or "Titillium-Web", sans-serif;
+$secondary-font: "Oxanium", serif;
 
 h1, // all headings
 h2,
