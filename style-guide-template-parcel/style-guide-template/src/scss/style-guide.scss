@@ -9,15 +9,6 @@
 @import "partials/colors";
 @import "partials/background";
 
-/* -------------------------------- 
-
-xBackground 
-
--------------------------------- */
-
-body {
-	/* this is the page background */
-	background-color: $color-5;
-}
+//everything is in a partial; see above
 
 @import "partials/basic-style";
