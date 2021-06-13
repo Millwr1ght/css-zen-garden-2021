@@ -25,3 +25,14 @@ $L:     1600px;
   float: $float-direction;
 }
 
+.summary, .preamble, .explanation, .participation, .benefits, .requirements, footer, .wrapper {
+  background-color: #000000a3;
+margin: 5%;
+padding: 5%;
+}
+h2::before {content: ""!important;}
+
+header {
+  text-align: center;}
+
+.summary {margin-top: 25%;}

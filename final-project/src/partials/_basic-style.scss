@@ -37,13 +37,12 @@ input, textarea, select {
 
 header {
 	position: fixed;
-	height: 50px;
+	height: auto;
 	width: 100%;
 	top: 0;
 	left: 0;
 	box-shadow: 0 1px 1px rgba(#000, .1);
 	z-index: 10;
-
 	nav {
 		display: inline-block;
 	}
