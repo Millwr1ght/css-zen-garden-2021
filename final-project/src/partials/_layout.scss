@@ -22,7 +22,7 @@ $L:     1600px;
 
 @mixin column($percentage, $float-direction:left) {
   width: 100% * $percentage;
-  float: $float-direction;
+  float: none;
 }
 
 .summary, .preamble, .explanation, .participation, .benefits, .requirements, footer, .wrapper {
@@ -35,4 +35,45 @@ h2::before {content: ""!important;}
 header {
   text-align: center;}
 
-.summary {margin-top: 25%;}
+.summary {margin-top: 20%;}
+
+
+@media screen and (min-width: $M) {
+
+  .wrapper {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+} 
+  
+  .summary {width: 40%;
+  margin-top: 11%;}
+  .preamble {width: 40%;}
+ 
+  
+  #zen-supporting {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .explanation {flex-basis: 80%;}
+  .participation {flex-basis: 80%;}
+  .design-archives {flex-basis: 80%;}
+  .benefits {flex-basis: 80%;}
+  .requirements {flex-basis: 80%;}
+  .footer {flex-basis: 80%;}
+
+}
+
+@media screen and (min-width: $L) {
+   
+  
+   .summary {width: 80%;
+  margin-top: 20%;
+  margin-left: 30%}
+  .preamble {width: 80%;
+  margin-left: 30%;}
+}
+
+
+

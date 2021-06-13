@@ -48,7 +48,7 @@ header {
 	}
 
 	@include MQ(M) {
-		height: 80px;
+		height: 100px;
 		@include clearfix;
 	}
 }
