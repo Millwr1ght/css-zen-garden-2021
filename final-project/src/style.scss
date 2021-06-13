@@ -1,1 +1,22 @@
 // CSS Zen Garden style sheet
+@import "partials/reset";
+@import "partials/prefix-mixins";
+@import "partials/layout"; // responsive grid and media queries
+@import "partials/colors";
+@import "partials/typography"; // Fonts and fonts
+@import "partials/background";
+@import "partials/navigation"; // nav tools
+@import "partials/patterns"; // whatever these refer to
+@import "partials/buttons";
+@import "partials/page-title";
+
+//everything is in a partial; see above
+
+@import "partials/basic-style";
+
+/*  CSS Zen Garden Typography,
+    Styles, and Such, etc etc.
+
+    Authors: Nathan Johnston
+             April Hill 
+             Ronald Acarapi      */

@@ -1,0 +1,147 @@
+/* -------------------------------- 
+
+xNavigation 
+
+//Completed by April
+
+-------------------------------- */
+
+header {
+	background-image: linear-gradient($color-3, $color-4, $color-1);
+}
+
+.cd-logo {
+	/* logo box style */
+	background-color: $color-2;
+	width: 120px;
+
+	@include MQ(M) {
+		width: 180px;
+	}
+}
+
+.cd-main-nav {
+	/* main navigation background color - full screen on small devices */
+	background-image: linear-gradient($color-3, $color-4, $color-1);
+
+	li a {
+		color: $color-5;
+		border-color: $color-2;
+	}
+
+	@include MQ(M) {
+		li a {
+			color: $color-5;
+
+			&.selected {
+				color: $color-5;
+				box-shadow: 0 2px 0 $color-1;
+			}
+
+			&:hover {
+				color: $color-2;
+				border-color: $color-5;
+			}
+		}
+	}
+}
+
+.cd-nav-trigger span {
+	/* hamburger menu */
+	background-color: $color-5;
+
+	&::before,
+	&::after {
+		/* upper and lower lines */
+		background-color: $color-5;
+	}
+}
+
+.nav-is-visible .cd-nav-trigger span {
+	/* hide line in the center on mobile when nav is visible */
+	background-color: rgba($color-5, 0);
+
+	&::before,
+	&::after {
+		/* preserve visibility of upper and lower lines - close icon */
+		background-color: rgba($color-5, 1);
+	}
+}
+
+.cd-download {
+	/* download button top-right visible on big devices */
+	background-color: $color-2;
+
+	.no-touch &:hover {
+		background-color: lighten($color-2, 15%);
+	}
+
+	span {
+		/* tooltip */
+		background: $color-1;
+		color: $color-5;
+
+		&::before {
+			/* right arrow color */
+			border-color: $color-1;
+		}
+	}
+}
+
+//magenta and purple vertical navigation bar white black and white text
+.cd-primary-nav {
+
+    background-color: $color-4;
+    width: 200px;
+    text-align: center;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li a {
+        color: $color-5;
+        display: block;
+        padding: 12px 16px;
+
+        &:hover {
+          color: $color-2;
+          background-color: $color-3;
+        }
+      }
+    }
+}
+
+//black and white vertical navigation bar
+.cd-secondary-nav {
+
+    background-color: $color-2;
+    width: 200px;
+    text-align: center;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li a {
+        color: $color-5;
+        display: block;
+        padding: 12px 16px;
+
+        &:hover {
+          color: $color-2;
+          background-color: $color-5;
+        }
+      }
+    }
+}
+
+//for other links - black text, blue when hovered
+.navigation {
+    a {
+      color: $color-2;
+      &:hover {
+        color: $color-1;
+      }
+    }
+}
