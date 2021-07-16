@@ -91,11 +91,15 @@ header {
   .design-name:before {
     content: url("https://ron981010.github.io/kochambercommerce.github.io/images/star.svg");
     margin-right: 4px;
-    animation: all 2s linear; 
   }
   
-  .design-name:hover::before {
-    transform: rotate(-25deg); 
+  .designer-name:hover {
+    color: #F2006B;
+    
+  }
+  
+  .design-name:hover {
+    color: white;
   }
   
   .wrapper:before {
