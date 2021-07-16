@@ -90,58 +90,56 @@ header {
 
 //magenta and purple vertical navigation bar white black and white text
 .cd-primary-nav {
+	background-color: $color-4;
+	width: 200px;
+	text-align: center;
 
-    background-color: $color-4;
-    width: 200px;
-    text-align: center;
+	ul {
+		margin: 0;
+		padding: 0;
 
-    ul {
-      margin: 0;
-      padding: 0;
+		li a {
+			color: $color-5;
+			display: block;
+			padding: 12px 16px;
 
-      li a {
-        color: $color-5;
-        display: block;
-        padding: 12px 16px;
-
-        &:hover {
-          color: $color-2;
-          background-color: $color-3;
-        }
-      }
-    }
+			&:hover {
+				color: $color-2;
+				background-color: $color-3;
+			}
+		}
+	}
 }
 
 //black and white vertical navigation bar
 .cd-secondary-nav {
+	background-color: $color-2;
+	width: 200px;
+	text-align: center;
 
-    background-color: $color-2;
-    width: 200px;
-    text-align: center;
+	ul {
+		margin: 0;
+		padding: 0;
 
-    ul {
-      margin: 0;
-      padding: 0;
+		li a {
+			color: $color-5;
+			display: block;
+			padding: 12px 16px;
 
-      li a {
-        color: $color-5;
-        display: block;
-        padding: 12px 16px;
-
-        &:hover {
-          color: $color-2;
-          background-color: $color-5;
-        }
-      }
-    }
+			&:hover {
+				color: $color-2;
+				background-color: $color-5;
+			}
+		}
+	}
 }
 
 //for other links - black text, blue when hovered
 .navigation {
-    a {
-      color: $color-2;
-      &:hover {
-        color: $color-1;
-      }
-    }
+	a {
+		color: $color-2;
+		&:hover {
+			color: $color-1;
+		}
+	}
 }
