@@ -40,9 +40,10 @@ select {
 }
 
 header {
-	position: fixed;
-	height: auto;
+	position: absolute;
+	max-height: 300px;
 	width: 100%;
+	padding: 20px;
 	top: 0;
 	left: 0;
 	box-shadow: 0 1px 1px rgba(#000, .1);
@@ -53,7 +54,6 @@ header {
 	}
 
 	@include MQ(M) {
-		height: 100px;
 		@include clearfix;
 	}
 }
@@ -297,7 +297,7 @@ main {
 		}
 	}
 }
-
+/*
 section {
 	margin: 3em 0;
 	@include clearfix;
@@ -355,7 +355,7 @@ section {
 		}
 	}
 }
-
+*/
 /* xBranding section - basic style */
 
 .cd-branding {

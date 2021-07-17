@@ -4,7 +4,7 @@ xTypography
 
 -------------------------------- */
 
-@import url("https://fonts.googleapis.com/css2?family=Oxanium&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
 // font variables //
@@ -24,9 +24,9 @@ h3 {
 h1 {
 	color: $color-2;
 	font-size: 2.4rem;
-	font-weight: 300;
+	font-weight: 600;
 	line-height: 1.2;
-	margin: 0 0 0.4em;
+	margin-bottom: 10px;
 
 	@include MQ(S) {
 		font-size: 3.2rem;
@@ -40,12 +40,14 @@ h1 {
 h2 {
 	font-weight: bold;
 	text-transform: uppercase;
-	margin: 1em 0;
 
 	@include MQ(S) {
 		font-size: 1.8rem;
-		margin: 1em 0 1.4em;
 	}
+}
+
+h3 {
+	font-size: 2rem;
 }
 
 section > h2::before {
