@@ -6,11 +6,16 @@ xNavigation
 
 -------------------------------- */
 
-header {
-	background-image: linear-gradient($color-3, $color-4);
+.intro {
+	background-image: linear-gradient($color-4, $color-3);
 	border-bottom: 8px solid $color-1;
 }
 
+header {
+	
+	margin: auto 5%;
+	text-align: center;
+}
 .cd-logo {
 	/* logo box style */
 	background-color: $color-2;
