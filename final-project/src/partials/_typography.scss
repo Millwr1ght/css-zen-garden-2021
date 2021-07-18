@@ -4,8 +4,9 @@ xTypography
 
 -------------------------------- */
 
-@import url("https://fonts.googleapis.com/css2?family=Oxanium&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
 
 // font variables //
 // body copy
@@ -13,6 +14,8 @@ $primary-font: "Ubuntu", sans-serif; //or "Titillium-Web", sans-serif;
 
 // titles, tunes and metres
 $secondary-font: "Oxanium", serif;
+
+$body-font: "Montserrat", sans-serif; //better readibility
 
 h1, // all headings, except inside section boxes, b/c white-on-white is bad
 h2, 
@@ -23,29 +26,23 @@ h3 {
 
 h1 {
 	color: $color-2;
-	font-size: 2.4rem;
-	font-weight: 300;
-	line-height: 1.2;
-	margin: 0 0 0.4em;
-
-	@include MQ(S) {
-		font-size: 3.2rem;
-	}
-
-	@include MQ(M) {
-		font-size: 4rem;
-	}
+	font-size: 4rem;
+	font-weight: 800;
+	margin-bottom: 10px;
 }
 
 h2 {
-	font-weight: bold;
 	text-transform: uppercase;
-	margin: 1em 0;
 
 	@include MQ(S) {
-		font-size: 1.8rem;
-		margin: 1em 0 1.4em;
+		font-size: 2.5rem;
 	}
+}
+
+h3 {
+	font-size: 2.5rem;
+	padding: 10px;
+	font-weight: 600;
 }
 
 section > h2::before {
@@ -54,19 +51,20 @@ section > h2::before {
 }
 
 p {
-	font-size: 1.4rem;
-	line-height: 1.4;
-	color: darken($color-5, 15%);
-
-ul,	a {
-		color: $color-1;
+	font-size: 1.7rem;
+	line-height: 1.7;
+	color:$color-5;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	a {	
+		color: $color-4;
 		text-decoration: underline;
 	}
+}
 
-	@include MQ(S) {
-		font-size: 1.6rem;
-		line-height: 1.6;
-	}
+a {
+	text-decoration: underline;
+	color: $color-4;
 }
 
 .cd-primary-nav a,

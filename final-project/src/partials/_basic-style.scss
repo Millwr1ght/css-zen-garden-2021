@@ -39,24 +39,25 @@ select {
 	font-size: 1.6rem;
 }
 
-header {
-	position: fixed;
-	height: auto;
+.intro {
 	width: 100%;
-	top: 0;
-	left: 0;
-	box-shadow: 0 1px 1px rgba(#000, 0.1);
-	z-index: 10;
+	padding: 20px;
+	box-shadow: 0 1px 1px rgba(#000, .1);
+	z-index: -1;
 
 	nav {
 		display: inline-block;
 	}
 
 	@include MQ(M) {
-		height: 100px;
+		@include clearfix;
+	}
+
+	@include MQ(M) {
 		@include clearfix;
 	}
 }
+
 
 .cd-logo {
 	display: inline-block;
@@ -296,7 +297,7 @@ main {
 		}
 	}
 }
-
+/*
 section {
 	margin: 3em 0;
 	@include clearfix;
@@ -354,7 +355,7 @@ section {
 		}
 	}
 }
-
+*/
 /* xBranding section - basic style */
 
 .cd-branding {
