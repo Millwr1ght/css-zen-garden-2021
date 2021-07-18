@@ -1,3 +1,5 @@
+@import "colors";
+
 // breakpoints
 
 $S: 768px;
@@ -8,15 +10,15 @@ $L: 1600px;
 
 @mixin MQ($canvas) {
 	@if $canvas==S {
-		@media only screen and (min-width: $S) {
+		@media screen and (min-width: $S) {
 			@content;
 		}
 	} @else if $canvas==M {
-		@media only screen and (min-width: $M) {
+		@media screen and (min-width: $M) {
 			@content;
 		}
 	} @else if $canvas==L {
-		@media only screen and (min-width: $L) {
+		@media screen and (min-width: $L) {
 			@content;
 		}
 	}
@@ -26,50 +28,263 @@ $L: 1600px;
 
 @mixin column($percentage, $float-direction: left) {
 	width: 100% * $percentage;
-	float: none;
 }
 
-.summary,
-.preamble,
+@keyframes fadeEffect {
+	/* from 0 to full opacity */
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.page-wrapper {
+	display: grid;
+	grid-template-columns: auto;
+	animation: fadeEffect 3s;
+}
+.header {
+	width: 100%;
+}
+
+.sidebar {
+	columns: 1/3;
+	grid-row: 2/4;
+}
+
 .explanation,
 .participation,
 .benefits,
 .requirements,
-footer,
-.wrapper {
-	background-color: #000000a3;
-	margin: 5%;
+footer {
+	background-color: $color-2-opaque;
+	margin: 2.5% 5%;
 	padding: 5%;
 	border-style: solid;
-	border-width: 1px;
-	border-color: #00dbf7;
-	border-radius: 2px;
+	border-width: 3px;
+	border-color: $color-1;
+	border-radius: 6px;
 }
-
+.summary {
+	padding: 20px;
+	text-align: center;
+}
+.preamble {
+	padding: 30px;
+	text-align: center;
+}
 h2::before {
 	content: "" !important;
 }
 
-header {
+.design-selection,
+.design-archives {
+	display: block;
+	& h3 {
+		background-color: $color-1;
+		color: $color-5;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+		&:hover {
+			background-color: $color-3;
+		}
+	}
+	& nav {
+		display: block;
+		background-color: $color-2;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+		text-align: left;
+		width: 100%;
+	}
+	& li {
+		color: $color-1;
+		text-decoration: none;
+		display: block;
+		padding: 20px;
+		&:hover {
+			background-color: #f1f1f1;
+		}
+	}
+	&:hover nav {
+		display: block;
+	}
+}
+.zen-resources {
+	position: relative;
+	display: block;
+	& h3 {
+		background-color: $color-1;
+		color: $color-5;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+		&:hover {
+			background-color: $color-3;
+		}
+	}
+	& ul {
+		display: block;
+		background-color: $color-2;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+		width: 100%;
+		text-align: left;
+	}
+	& li {
+		color: $color-1;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		&:hover {
+			background-color: #f1f1f1;
+		}
+	}
+	&:hover ul {
+		display: block;
+	}
+}
+
+.footer {
 	text-align: center;
 }
 
-.summary {
-	margin-top: 20%;
-}
-
+//medium media query mixin
 @include MQ(M) {
-	.wrapper {
-		position: absolute;
-		top: 10%;
-		right: 10%;
-		border-color: #f2006b;
-		color: #a2f1fa;
-		padding: 3%;
+	.page-wrapper {
+		grid-template-columns: 1fr 1fr;
 	}
 
-	.wrapper ul a {
-		color: #3381ff;
+	.intro {
+		grid-column: 1/3;
+		grid-row: 1/3;
+	}
+
+	header {
+		width: 50%;
+		padding: 20px;
+	}
+
+	.sidebar {
+		border-color: #f2006b;
+		color: #a2f1fa;
+		grid-column: 2/4;
+		grid-row: 1/3;
+		z-index: 2;
+		text-align: center;
+	}
+
+	.wrapper {
+		margin: 5% auto;
+		padding: 5%;
+		text-align: center;
+	}
+	.design-archives,
+	.design-selection,
+	.zen-resources {
+		max-width: 200px;
+		text-align: center;
+		margin: auto;
+		& h3 {
+			margin-bottom: 5%;
+		}
+	}
+
+	.design-selection,
+	.design-archives {
+		position: relative;
+		display: block;
+		& h3 {
+			background-color: $color-1;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			border-radius: 6px;
+			&:hover {
+				background-color: $color-3;
+			}
+		}
+		& nav {
+			display: none;
+			position: absolute;
+			background-color: $color-2;
+			min-width: 250px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+			text-align: left;
+			margin-top: -10px;
+		}
+		& li {
+			color: $color-1;
+			text-decoration: none;
+			display: block;
+			padding: 20px;
+			&:hover {
+				background-color: #f1f1f1;
+			}
+		}
+		&:hover nav {
+			display: block;
+		}
+	}
+	.zen-resources {
+		position: relative;
+		display: block;
+		& h3 {
+			background-color: $color-1;
+			color: $color-5;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			border-radius: 6px;
+			&:hover {
+				background-color: $color-3;
+			}
+		}
+		& ul {
+			display: none;
+			position: absolute;
+			background-color: $color-2;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+			min-width: 250px;
+			margin-top: -10px;
+			text-align: left;
+		}
+		& li {
+			color: $color-1;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			&:hover {
+				background-color: #f1f1f1;
+			}
+		}
+		&:hover ul {
+			display: block;
+		}
+	}
+	.summary {
+		width: 50%;
+		margin: auto 5%;
+	}
+
+	.preamble {
+		width: 100%;
+		margin: auto;
+	}
+
+	.main {
+		grid-column: 1/3;
+		grid-row: 3/5;
 	}
 
 	.wrapper ul {
@@ -87,21 +302,11 @@ header {
 		margin-right: 4px;
 	}
 
-	.designer-name:hover {
-		color: #f2006b;
-	}
-
-	.design-name:hover {
-		color: white;
-	}
-
 	.wrapper:before {
 		content: url("https://ron981010.github.io/kochambercommerce.github.io/images/byui2.svg");
 		position: absolute;
-		width: 30%;
-		justify-self: center;
-		top: 60%;
-		left: 72%;
+		width: 10%;
+		right: 10%;
 		fill: #000000a3;
 		animation: rocket-rotate 20s linear infinite;
 	}
@@ -116,7 +321,6 @@ header {
 		10% {
 			transform: rotate(-27deg) translateY(-10%) translateX(-10%);
 		}
-
 		15% {
 			-webkit-transform: rotate(0deg) translateY(-30%) translateX(-30%);
 		}
@@ -128,31 +332,18 @@ header {
 			-webkit-transform: rotate(380deg) translateY(-350%)
 				translateX(-150%);
 		}
-
 		70% {
 			-webkit-transform: rotate(400deg) translateY(-50%) translateX(-50%);
 		}
-
 		80% {
 			transform: rotate(360deg) translateY(-35%) translateX(-50%);
 		}
-
 		100% {
 			transform: rotate(335deg) translateY(-5%) translateX(-10%);
 		}
 	}
 
-	.summary {
-		width: 40%;
-		margin-top: 11%;
-	}
-
-	.preamble {
-		width: 40%;
-	}
-
 	#zen-supporting {
-		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
 	}
@@ -182,15 +373,11 @@ header {
 	}
 }
 
+//large media query mixin
 @include MQ(L) {
-	.summary {
-		width: 80%;
-		margin-top: 20%;
-		margin-left: 30%;
-	}
-
-	.preamble {
-		width: 80%;
-		margin-left: 30%;
+	.design-archives,
+	.design-selection,
+	.zen-resources {
+		display: inline-block;
 	}
 }
