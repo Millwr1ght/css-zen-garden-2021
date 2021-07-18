@@ -6,7 +6,7 @@ xBackground
 
 -------------------------------- */
 
-@include MQ(M) {
+@media screen and (max-width: $M) {
 	body {
 		background: url("https://www.10wallpaper.com/wallpaper/1600x1200/1606/Space_time_travel-Universe_Digital_HD_Wallpaper_1600x1200.jpg")
 			no-repeat;
