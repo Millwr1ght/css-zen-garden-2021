@@ -270,7 +270,7 @@ main {
 	margin: 0 auto;
 	padding: 50px 0;
 
-	> h1 {
+	>h1 {
 		text-align: center;
 		margin: 3em 0;
 	}
@@ -283,7 +283,7 @@ main {
 		max-width: none;
 		padding: 120px 0 50px;
 
-		> h1 {
+		>h1 {
 			position: fixed;
 			top: 0;
 			left: 50%;
@@ -629,6 +629,7 @@ section {
 /* xForm section - basic style */
 
 .cd-form {
+
 	input[type="text"],
 	.cd-input-wrapper {
 		margin: 1em;
@@ -645,6 +646,7 @@ section {
 }
 
 @-moz-document url-prefix() {
+
 	/* hide custom arrow on Firefox */
 	.cd-select::after {
 		display: none;
@@ -654,3 +656,4 @@ section {
 .no-csstransitions .cd-select::after {
 	display: none;
 }
+

@@ -11,11 +11,15 @@ $L: 1600px;
 		@media only screen and (min-width: $S) {
 			@content;
 		}
-	} @else if $canvas==M {
+	}
+
+	@else if $canvas==M {
 		@media only screen and (min-width: $M) {
 			@content;
 		}
-	} @else if $canvas==L {
+	}
+
+	@else if $canvas==L {
 		@media only screen and (min-width: $L) {
 			@content;
 		}
@@ -58,6 +62,73 @@ header {
 	margin-top: 20%;
 }
 
+/* small view details */
+
+.wrapper ul a {
+	color: #3381ff;
+}
+
+.wrapper ul {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.wrapper li {
+	padding-top: 2px;
+	padding-bottom: 1px;
+}
+
+.design-name:before {
+	content: url("https://ron981010.github.io/kochambercommerce.github.io/images/star.svg");
+	margin-right: 4px;
+}
+
+.designer-name:hover {
+	color: #f2006b;
+}
+
+.design-name:hover {
+	color: white;
+}
+
+.wrapper {
+	border-color: #f2006b;
+	color: #a2f1fa;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+}
+
+.zen-validate-html,
+.zen-validate-css,
+.zen-license,
+.zen-accessibility,
+.zen-github {
+
+	color: #a2f1fa;
+	margin-right: 15px;
+}
+
+.zen-validate-html::after,
+.zen-validate-css::after,
+.zen-license::after,
+.zen-accessibility::after,
+.zen-github::after {
+
+	content: url("https://ron981010.github.io/kochambercommerce.github.io/images/star.svg");
+	margin-left: 4px;
+}
+
+.zen-validate-html:hover,
+.zen-validate-css:hover,
+.zen-license:hover,
+.zen-accessibility:hover,
+.zen-github:hover {
+	color: #f2006b;
+}
+
 @include MQ(M) {
 	.wrapper {
 		position: absolute;
@@ -95,6 +166,32 @@ header {
 		color: white;
 	}
 
+	.explanation::before {
+		content: url("https://ron981010.github.io/kochambercommerce.github.io/11-black%20hole.svg");
+		position: absolute;
+		width: 5%;
+		justify-self: center;
+		top: 60%;
+		right: 95%;
+		fill: #000000a3;
+		z-index: 0;
+	}
+
+	.explanation::after {
+		content: url("https://ron981010.github.io/kochambercommerce.github.io/14-galaxy.svg");
+		position: absolute;
+		width: 10%;
+		justify-self: center;
+		top: 40%;
+		left: 88%;
+		fill: #000000a3;
+		z-index: 1;
+	}
+
+	.explanation {
+		z-index: 2;
+	}
+
 	.wrapper:before {
 		content: url("https://ron981010.github.io/kochambercommerce.github.io/images/byui2.svg");
 		position: absolute;
@@ -110,9 +207,11 @@ header {
 		0% {
 			transform: rotate(-25deg) translateY(-5%) translateX(-10%);
 		}
+
 		5% {
 			transform: rotate(-25deg) translateY(-5%) translateX(-10%);
 		}
+
 		10% {
 			transform: rotate(-27deg) translateY(-10%) translateX(-10%);
 		}
@@ -120,13 +219,13 @@ header {
 		15% {
 			-webkit-transform: rotate(0deg) translateY(-30%) translateX(-30%);
 		}
+
 		30% {
-			-webkit-transform: rotate(360deg) translateY(-200%)
-				translateX(-200%);
+			-webkit-transform: rotate(360deg) translateY(-200%) translateX(-200%);
 		}
+
 		35% {
-			-webkit-transform: rotate(380deg) translateY(-350%)
-				translateX(-150%);
+			-webkit-transform: rotate(380deg) translateY(-350%) translateX(-150%);
 		}
 
 		70% {
@@ -140,6 +239,185 @@ header {
 		100% {
 			transform: rotate(335deg) translateY(-5%) translateX(-10%);
 		}
+	}
+
+	.summary::before {
+		content: url("https://ron981010.github.io/kochambercommerce.github.io/35-capsule.svg");
+		position: absolute;
+		width: 10%;
+		justify-self: center;
+		top: 5%;
+		right: 82%;
+		fill: #000000a3;
+		animation: ufo-rotate 20s linear infinite;
+		display: inline-block;
+	}
+
+	.summary::after {
+		content: url("https://ron981010.github.io/kochambercommerce.github.io/line-cow.svg");
+		position: absolute;
+		width: 10%;
+		justify-self: center;
+		top: 15%;
+		right: 82%;
+		fill: #000000a3;
+		animation: ufo-lines 20s linear infinite;
+		opacity: 0;
+		display: inline-block;
+	}
+
+	.preamble::before {
+		content: url("https://ron981010.github.io/kochambercommerce.github.io/cow.svg");
+		position: absolute;
+		width: 10%;
+		justify-self: center;
+		top: 35%;
+		left: 53%;
+		fill: #000000a3;
+		animation: cow 20s linear infinite;
+		opacity: 1;
+		display: inline-block;
+	}
+
+	@keyframes ufo-rotate {
+
+		0% {
+			transform: translateX(10%);
+		}
+
+		5% {
+			transform: translateX(90%);
+		}
+
+		10% {
+			transform: translateX(230%);
+		}
+
+		15% {
+			transform: translateX(450%);
+		}
+
+		30% {
+			transform: translateY(35%) translateX(450%) scale(1);
+		}
+
+		35% {
+			transform: translateY(120%) translateX(450%) scale(0.6);
+		}
+
+		70% {
+			transform: translateY(0%) translateX(450%);
+		}
+
+		80% {
+			transform: translateX(800%);
+		}
+
+		100% {
+			transform: translateX(10%);
+		}
+	}
+
+	@keyframes ufo-lines {
+
+
+		0% {
+			transform: translateX(10%);
+		}
+
+		5% {
+			transform: translateX(90%);
+		}
+
+		10% {
+			transform: translateX(230%);
+		}
+
+		15% {
+			transform: translateX(450%);
+		}
+
+		30% {
+			transform: translateY(35%) translateX(450%) scale(1);
+			opacity: 0;
+		}
+
+		35% {
+			transform: translateY(100%) translateX(450%) scale(0.6);
+			opacity: 1;
+		}
+
+		70% {
+			transform: translateY(0%) translateX(450%) scale(1.8);
+		}
+
+		80% {
+			transform: translateX(800%);
+			opacity: 0;
+		}
+
+		100% {
+			transform: translateX(10%);
+		}
+	}
+
+	@keyframes cow {
+
+		0% {
+			transform: translateY(35%) translateX(0%) rotate(-23deg) scale(0);
+			opacity: 1;
+		}
+
+		5% {
+			transform: translateY(35%) translateX(0%) rotate(-23deg) scale(0);
+			opacity: 1;
+		}
+
+		10% {
+			transform: translateY(35%) translateX(0%) rotate(-23deg) scale(0);
+			opacity: 1;
+		}
+
+		15% {
+			transform: translateY(35%) translateX(0%) rotate(-23eg) scale(0);
+			opacity: 1;
+		}
+
+		30% {
+			transform: translateY(35%) translateX(0%) rotate(-23deg) scale(0);
+			opacity: 1;
+		}
+
+		35% {
+			transform: translateY(35%) translateX(0%) scale(0);
+			opacity: 1;
+		}
+
+		70% {
+			transform: translateY(-120%) translateX(0%) scale(1);
+			opacity: 1;
+		}
+
+		80% {
+			transform: translateY(-120%) translateX(350%) scale(0);
+			opacity: 0;
+		}
+
+		100% {
+			transform: translateY(35%) translateX(10%) rotate(-23deg);
+			opacity: 0;
+		}
+	}
+
+	.preamble::after {
+		content: url("file:///C:/Users/Manuel/Desktop/rebuilt/assets/SVG/EXPANDED/2-earth.svg");
+		position: absolute;
+		width: 10%;
+		justify-self: center;
+		top: 48%;
+		left: 53%;
+		fill: #000000a3;
+		transform: rotate(27deg);
 	}
 
 	.summary {
