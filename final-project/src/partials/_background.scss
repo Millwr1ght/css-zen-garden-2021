@@ -8,18 +8,18 @@ xBackground
 
 @media screen and (max-width: $M) {
 	body {
-		background: url("https://www.10wallpaper.com/wallpaper/1600x1200/1606/Space_time_travel-Universe_Digital_HD_Wallpaper_1600x1200.jpg") no-repeat;
+		background: url("https://www.10wallpaper.com/wallpaper/1600x1200/1606/Space_time_travel-Universe_Digital_HD_Wallpaper_1600x1200.jpg")
+			no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
 	}
-
 }
 
-@media screen and (min-width: $M) {
+@include MQ(M) {
 	body {
-		background: url("https://i.pinimg.com/originals/3d/12/7c/3d127c64bd8501958892473f04c95ae5.jpg") no-repeat;
+		background: url("https://i.pinimg.com/originals/3d/12/7c/3d127c64bd8501958892473f04c95ae5.jpg")
+			no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
 	}
-
 }
